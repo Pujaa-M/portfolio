@@ -7,6 +7,7 @@ import CodeSnippet2 from '../../assets/images/code-snippet-2.PNG'
 import EmailIcon from '../../assets/images/email-icon.svg'
 import PhoneIcon from '../../assets/images/phone-icon.svg'
 import GmailLogo from '../../assets/images/gmail-logo.svg'
+import { useRef } from 'react'
 
 const HomeComponent = () => {
     let skills = ['Angular', 'ReactJS', 'HTML', 'CSS', 'SCSS', 'Javascript', 'Typescript', 'PHP', 'MongoDB', 'Elasticsearch']
@@ -15,6 +16,23 @@ const HomeComponent = () => {
     const openMail = () => {
         window.open('https://mail.google.com/mail/?view=cm&fs=1&to=pujaa1201@gmail.com', '_blank')
     }
+
+    const bgRef = useRef(null)
+    let scrollShift = 0
+
+    window.addEventListener("scroll", () => {
+        if(bgRef.current) {
+            let direction = scrollShift < window.scrollY
+            scrollShift = window.scrollY
+            let drag = 0.4
+            if(direction) {
+                bgRef.current.style.top = `${-scrollShift * drag}px`
+            }
+            else {
+                bgRef.current.style.top = `${-scrollShift * drag}px`
+            }
+        }
+    })
 
     return <div className="home-page">
         <div className="navigation">
@@ -55,9 +73,6 @@ const HomeComponent = () => {
             </div>
         </div>
 
-        <img className="code-snippet-1" src={CodeSnippet1} alt=""></img>
-        <img className="code-snippet-2" src={CodeSnippet2} alt=""></img>
-
         <div className="contacts">
             {
                 contacts.map((contact, index) => 
@@ -69,6 +84,13 @@ const HomeComponent = () => {
         </div>
 
         <div className="gmail" onClick={openMail}><img className="gmail-logo" src={GmailLogo} alt="gmail"></img></div>
+
+        <div className="bg-code" ref={bgRef}>
+            <img className="code-snippet-1" src={CodeSnippet1} alt=""></img>
+            <img className="code-snippet-2" src={CodeSnippet2} alt=""></img>
+            <img className="code-snippet-1" src={CodeSnippet1} alt=""></img>
+            <img className="code-snippet-2" src={CodeSnippet2} alt=""></img>
+        </div>
     </div>
 }
 
