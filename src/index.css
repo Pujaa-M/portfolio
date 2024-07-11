@@ -84,6 +84,7 @@ html::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 10px #03001C;
+  cursor: pointer;
 }
 
 .gmail-logo {
@@ -432,7 +433,6 @@ html::-webkit-scrollbar {
   width: 600px;
   height: 400px;
   display: flex;
-  cursor: pointer;
 }
 
 /* .card:hover {
@@ -447,6 +447,7 @@ html::-webkit-scrollbar {
   overflow: hidden;
   position: relative;
   z-index: 5;
+  cursor: pointer;
 }
 
 .card-desc {
