@@ -6,6 +6,25 @@ import Creativity from '../../assets/images/creativity.svg'
 
 const AboutComponent = () => {
     const imageSlideRef = useRef(null)
+    const professionalRef = useRef(null)
+    const personalRef = useRef(null)
+
+    const addAnimation = (element) => {
+        const viewHeight = window.innerHeight
+        if(element) {
+            let position = element.getBoundingClientRect().y
+            let positionPercent = (position / viewHeight) * 100
+
+            if(positionPercent <= 70) {
+                element.classList.add('fade-in')
+            }
+        }
+    }
+
+    window.addEventListener("scroll", () => {
+        addAnimation(professionalRef.current)
+        addAnimation(personalRef.current)
+    })
 
     const slideIn = () => {
         if(imageSlideRef.current) {
@@ -39,16 +58,16 @@ const AboutComponent = () => {
         </div>
 
         <div className='intro'>
-            <div className="professional">
+            <div className="professional" ref={professionalRef}>
                 <p>
-                    A dedicated Software developer with a Bachelor's degree in Computer Science and Engineering from Mepco Schlenk Engineering College, Sivakasi. I have professional experience working at Educational Initiatives from June 2022 to December 2023, where I edged my skills in developing comprehensive web applications.
+                    A <b>dedicated Software developer</b> with a <b>Bachelor's degree</b> in <b>Computer Science and Engineering</b> from <b>Mepco Schlenk Engineering College, Sivakasi</b>. I've had the opportunity to hone my skills in frontend development during my time at <b>Educational Initiatives (June 2022 - December 2023)</b>, where I contributed to building comprehensive web applications.
                 </p>
                 <img className="graduate-icon" src={Graduate} alt="graduate-icon"></img>
             </div>
 
-            <div  className="personal">
+            <div  className="personal" ref={personalRef}>
                 <img src={Creativity} alt="creativity-icon"></img>
-                <p>My primary passion lies in frontend development, creating intuitive and visually appealing user interfaces. Beyond my professional life, I have a strong interest in digital art, sketching, crafting, and reading, which further fuels my creativity and attention to detail in my professional projects.</p>
+                <p>My primary <b>passion</b> lies in <b>frontend development</b>, creating intuitive and visually appealing user interfaces. Beyond my professional life, I have a strong interest in <b>digital art</b>, <b>sketching</b>, <b>crafting</b>, and <b>reading</b>, which further fuels my creativity and attention to detail in my professional projects.</p>
             </div>
         </div>
     </div>

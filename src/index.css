@@ -290,6 +290,12 @@ html::-webkit-scrollbar {
   align-items: center;
   justify-content: space-evenly;
   gap: 50px;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.fade-in {
+  animation: fade-in 0.3s linear forwards;
 }
 
 .professional > img, .personal > img {
@@ -583,6 +589,16 @@ html::-webkit-scrollbar {
   }
 }
 
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @media screen and (max-width: 1142px) {
   .title {
