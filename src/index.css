@@ -310,7 +310,7 @@ html::-webkit-scrollbar {
 .experience {
   /* background: #1a1529; */
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .accordian-container {
