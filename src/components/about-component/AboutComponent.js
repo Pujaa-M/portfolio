@@ -60,7 +60,7 @@ const AboutComponent = () => {
         <div className='intro'>
             <div className="professional" ref={professionalRef}>
                 <p>
-                    A <b>dedicated Software developer</b> with a <b>Bachelor's degree</b> in <b>Computer Science and Engineering</b> from <b>Mepco Schlenk Engineering College, Sivakasi</b>. I've had the opportunity to hone my skills in frontend development during my time at <b>Educational Initiatives (June 2022 - December 2023)</b>, where I contributed to building comprehensive web applications.
+                    A <b>dedicated Software developer</b> with a <b>Bachelor's degree</b> in <b>Computer Science and Engineering</b> from <b>Mepco Schlenk Engineering College, Sivakasi</b>. I've had the opportunity to hone my skills in some latest tech stacks during my time at <b>Educational Initiatives (June 2022 - December 2023)</b>, where I contributed to building comprehensive web applications.
                 </p>
                 <img className="graduate-icon" src={Graduate} alt="graduate-icon"></img>
             </div>
