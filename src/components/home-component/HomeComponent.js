@@ -90,6 +90,8 @@ const HomeComponent = () => {
             <img className="code-snippet-2" src={CodeSnippet2} alt=""></img>
             <img className="code-snippet-1" src={CodeSnippet1} alt=""></img>
             <img className="code-snippet-2" src={CodeSnippet2} alt=""></img>
+            <img className="code-snippet-1" src={CodeSnippet1} alt=""></img>
+            <img className="code-snippet-2" src={CodeSnippet2} alt=""></img>
         </div>
     </div>
 }

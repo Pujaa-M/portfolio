@@ -157,13 +157,13 @@ html::-webkit-scrollbar {
 
 .code-snippet-1, .code-snippet-2 {
   width: 50%;
-  height: 50%;
+  height: 33%;
   object-fit: cover;
 }
 
 .bg-code {
   width: 100%;
-  height: 200%;
+  height: 300%;
   position: fixed;
   top: 0;
   left: 0;
@@ -197,6 +197,7 @@ html::-webkit-scrollbar {
   width: 100%;
   height: auto;
   background: #1a1529;
+  box-shadow: 0px 0px 100px 100px #1a1529;
 }
 
 .sub-heading {
@@ -259,6 +260,7 @@ html::-webkit-scrollbar {
 .avatar-pic {
   position: sticky;
   left: 0;
+  opacity: 0.75;
 }
 
 .my-pic {
@@ -391,7 +393,7 @@ html::-webkit-scrollbar {
 .projects {
   width: 100%;
   height: auto;
-  background: #1a1529;
+  background: #B6EADA11;
 }
 
 .project-categories {
@@ -425,10 +427,8 @@ html::-webkit-scrollbar {
 }
 
 .cards {
-  /* height: 740px; */
   margin: 20px;
   margin-right: 0;
-  /* padding-bottom: 60px; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -441,14 +441,10 @@ html::-webkit-scrollbar {
   display: flex;
 }
 
-/* .card:hover {
-  border: 5px solid #5B8FB9;
-} */
-
 .card-display {
   width: 300px;
   height: 400px;
-  border: 5px solid #5B8FB9;
+  border: 2px solid #5B8FB9;
   border-radius: 30px 0 0 30px;
   overflow: hidden;
   position: relative;
@@ -460,9 +456,7 @@ html::-webkit-scrollbar {
   width: 330px;
   height: 400px;
   background: #5B8FB9;
-  /* border: 5px solid #5B8FB9; */
   clip-path: url(#card-desc-clip);
-  /* transform: translateX(-90%); */
   position: relative;
   right: 45%;
   transition: 0.3s ease-out;
