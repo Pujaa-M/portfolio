@@ -708,10 +708,9 @@ html::-webkit-scrollbar {
 @media screen and (max-width: 412px) {
   .navigation-list {
     gap: 45px;
+    font-size: 17px;
   }
-}
 
-@media screen and (max-width: 360px) {
   .dev {
     width: 300px;
   }
@@ -721,18 +720,39 @@ html::-webkit-scrollbar {
   }
 
   .other-desig {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 20px;
   }
 
   .chip {
     font-size: 11px;
-  }
-
-  .navigation-list {
-    font-size: 17px;
+    font-weight: 200;
   }
 
   .sub-heading {
+    font-size: 24px;
+  }
+
+  .image-slide {
+    height: 150px;
+    width: 150px;
+  }
+
+  .image-slide img {
+    height: 150px;
+  }
+
+  .orbit {
+    transform-origin: -90px 90px;
+    border-width: 5px;
+  }
+
+  .gmail {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .name-intro {
     font-size: 28px;
   }
 }
